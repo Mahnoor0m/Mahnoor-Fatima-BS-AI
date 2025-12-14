@@ -1,0 +1,813 @@
+/* Custom Pink Palette */
+:root {
+    --primary-pink: #FF69B4;
+    --secondary-pink: #F08080;
+    --background-color-light: #F8F8F8;
+    --background-color-white: #FFFFFF;
+    --text-color-dark: #333333;
+    --text-color-medium: #555555;
+    --border-color: #E0E0E0;
+    --box-shadow: 0 4px 12px rgba(0, 0, 0, 0.05);
+}
+
+/* Global Styles and Reset */
+* {
+    margin: 0;
+    padding: 0;
+    box-sizing: border-box;
+}
+
+body {
+    font-family: 'Arial', sans-serif;
+    background-color: #f2f2f2; 
+    background-image: url('../assets/body-bg-pattern.png'); 
+    background-repeat: repeat;
+    color: var(--text-color-dark);
+    line-height: 1.6;
+}
+
+.container {
+    width: 90%;
+    max-width: 1200px;
+    margin: 20px auto;
+    background-color: var(--background-color-white); 
+    padding: 30px;
+    border-radius: 8px;
+    box-shadow: var(--box-shadow);
+}
+
+/* Header and Navigation */
+header {
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+    padding: 20px 5%;
+    background-color: var(--background-color-white);
+    border-bottom: 1px solid var(--border-color);
+}
+.logo {
+    font-size: 1.6em;
+    font-weight: bold;
+    color: var(--primary-pink);
+    letter-spacing: 1px;
+}
+nav ul { list-style: none; display: flex; }
+nav ul li a { text-decoration: none; color: var(--text-color-medium); padding: 10px 15px; transition: color 0.3s, border-bottom 0.3s; }
+nav ul li a:hover, nav ul li a.active { color: var(--primary-pink); border-bottom: 2px solid var(--primary-pink); }
+
+/* CTA Button Styling */
+.cta-button, .view-section {
+    display: inline-block; padding: 12px 30px; background-color: var(--primary-pink); color: white; text-decoration: none; border-radius: 5px; font-weight: bold;
+    transition: background-color 0.3s, transform 0.3s; border: none; cursor: pointer; text-transform: uppercase; font-size: 0.9em; letter-spacing: 1px;
+}
+.cta-button:hover, .view-section:hover { background-color: #d14f8a; transform: scale(1.05); }
+
+/* --- 1. NEW HERO SECTION (Image-Focused) --- */
+.hero-section.hero-new-design {
+    height: 400px; 
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    background-color: var(--background-color-white); 
+    padding: 0;
+    margin-top: 20px;
+}
+
+.hero-new-design .hero-content {
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+    width: 100%;
+    padding: 0 30px;
+}
+
+.hero-text-new {
+    flex: 1;
+    max-width: 50%;
+    text-align: left;
+    padding-right: 50px;
+}
+
+.hero-text-new h1 {
+    font-size: 3em; 
+    color: var(--primary-pink);
+    margin-bottom: 15px;
+    line-height: 1.1;
+}
+.hero-text-new p {
+    font-size: 1.1em;
+    color: var(--text-color-medium);
+    margin-bottom: 30px;
+}
+
+.hero-image-focus {
+    flex: 1;
+    max-width: 50%;
+    height: 400px;
+    overflow: hidden;
+    position: relative;
+    border-radius: 8px;
+    box-shadow: 0 10px 20px rgba(0, 0, 0, 0.1);
+}
+
+.hero-image-focus img {
+    width: 100%;
+    height: 100%;
+    object-fit: cover;
+    display: block;
+}
+/* --- END NEW HERO SECTION --- */
+
+
+/* --- 2. Feature and Product Section Headings --- */
+.feature-section h2, .featured-products h2 {
+    text-align: center; color: var(--text-color-dark); margin-bottom: 30px; font-size: 1.8em; border-bottom: 2px solid var(--primary-pink); display: block; padding-bottom: 5px; width: auto; margin: 0 auto 30px auto;
+}
+
+/* --- Feature Icons (UNIFIED Hover Effect) --- */
+.feature-grid {
+    display: grid; grid-template-columns: repeat(auto-fit, minmax(250px, 1fr)); gap: 20px; margin-bottom: 30px;
+}
+.feature-card {
+    background-color: var(--background-color-light); padding: 25px; border-radius: 8px; text-align: center; border: 1px solid var(--border-color); position: relative; overflow: hidden; transition: transform 0.4s ease-out, box-shadow 0.4s ease-out, background-color 0.4s;
+}
+.feature-card:hover {
+    transform: translateY(-8px); box-shadow: 0 15px 30px rgba(255, 105, 180, 0.3); background-color: var(--background-color-white); border-color: var(--primary-pink);
+}
+.feature-card img {
+    width: 60px; height: 60px; object-fit: contain; margin-bottom: 15px; transition: transform 0.4s;
+}
+.feature-card:hover img {
+    transform: scale(1.1);
+}
+.feature-card h3 { color: var(--primary-pink); margin-bottom: 8px; font-size: 1.3em; }
+.feature-card p { font-size: 0.95em; color: var(--text-color-medium); }
+
+
+/* --- 3. NEW SINGLE IMAGE PROMO STYLING --- */
+.new-promo-image {
+    padding: 0; /* Ensures the container's padding doesn't interfere */
+    margin: 40px auto;
+    overflow: hidden;
+    border-radius: 8px;
+    box-shadow: var(--box-shadow);
+}
+.new-promo-image img {
+    width: 100%;
+    height: auto;
+    display: block;
+    object-fit: cover;
+}
+/* --- END NEW SINGLE IMAGE PROMO STYLING --- */
+
+
+/* --- 4. Featured Products Image Banner Styling --- */
+.featured-promo-image {
+    margin: 20px 0 30px 0; 
+    border-radius: 8px;
+    overflow: hidden; 
+}
+.featured-promo-image img {
+    width: 100%;
+    height: auto;
+    display: block;
+    object-fit: cover;
+}
+
+/* --- Product Grid Layout (UNIFIED Hover Effect) --- */
+.product-grid {
+    display: grid; grid-template-columns: repeat(auto-fit, minmax(250px, 1fr)); gap: 30px; padding: 20px 0;
+}
+.product-card {
+    background-color: var(--background-color-white); padding: 15px; text-align: center; border: 1px solid var(--border-color); border-radius: 8px; transition: transform 0.4s ease-out, box-shadow 0.4s ease-out, border-color 0.4s;
+}
+.product-card:hover {
+    transform: translateY(-8px); box-shadow: 0 15px 30px rgba(255, 105, 180, 0.3); border-color: var(--primary-pink);
+}
+.product-card img {
+    width: 100%; height: auto; max-height: 200px; object-fit: contain; margin-bottom: 10px;
+}
+.product-card h3 { font-size: 1.2em; color: var(--text-color-dark); margin-bottom: 5px; }
+.price { 
+    font-size: 1.1em; font-weight: bold; color: var(--primary-pink); transition: color 0.3s;
+}
+.product-card:hover .price {
+    color: var(--text-color-dark);
+}
+
+/* --- PROFESSIONAL FOOTER STYLING --- */
+footer {
+    text-align: center; background-color: var(--background-color-white); color: var(--text-color-medium); border-top: 1px solid var(--border-color); padding-top: 30px; margin-top: 40px;
+}
+.footer-container {
+    display: flex; justify-content: space-between; align-items: flex-start; padding: 0 0 30px 0; text-align: left; width: 90%; max-width: 1200px; margin: 0 auto;
+}
+.footer-col { flex: 1; min-width: 150px; padding: 0 15px; }
+.footer-col h4 { color: var(--primary-pink); margin-bottom: 15px; font-size: 1.1em; font-weight: bold; }
+.footer-col ul { list-style: none; }
+.footer-col ul li a { text-decoration: none; color: var(--text-color-medium); font-size: 0.9em; line-height: 2; transition: color 0.3s; }
+.footer-col ul li a:hover { color: var(--primary-pink); }
+.footer-bottom { background-color: var(--background-color-light); padding: 15px 0; font-size: 0.8em; color: #888; }
+
+/* --- Responsive Design (Media Queries) --- */
+@media (max-width: 992px) {
+    /* Responsive for Hero Section */
+    .hero-new-design .hero-content {
+        flex-direction: column;
+        text-align: center;
+        padding: 20px;
+    }
+    .hero-text-new {
+        max-width: 100%;
+        padding-right: 0;
+        margin-bottom: 20px;
+    }
+    .hero-image-focus {
+        max-width: 100%;
+        height: 300px;
+    }
+    .hero-text-new h1 {
+        font-size: 2.5em;
+    }
+}
+@media (max-width: 768px) {
+    header { flex-direction: column; }
+    .footer-container { flex-direction: column; align-items: center; text-align: center; }
+    .footer-col { margin-bottom: 20px; min-width: 100%; }
+}
+
+// Function for product filtering on products.html
+function filterProducts(category) {
+    const productCards = document.querySelectorAll('.product-card');
+    
+    productCards.forEach(card => {
+        const productCategory = card.getAttribute('data-category');
+        
+        if (category === 'all' || productCategory === category) {
+            card.style.display = 'block';
+        } else {
+            card.style.display = 'none';
+        }
+    });
+}
+
+// Function for client-side form validation on contact.html
+function handleFormSubmission(event) {
+    event.preventDefault(); 
+    
+    const nameInput = document.getElementById('name');
+    const emailInput = document.getElementById('email');
+    const messageInput = document.getElementById('message');
+
+    const nameError = document.getElementById('name-error');
+    const emailError = document.getElementById('email-error');
+    const messageError = document.getElementById('message-error');
+    const formSuccess = document.getElementById('form-success');
+
+    let isValid = true;
+
+    // Clear previous states
+    nameError.textContent = '';
+    emailError.textContent = '';
+    messageError.textContent = '';
+    formSuccess.textContent = '';
+
+    // Simple validation checks
+    if (nameInput.value.trim() === '') {
+        nameError.textContent = 'Name is required.';
+        isValid = false;
+    }
+
+    const emailPattern = /^[^\s@]+@[^\s@]+\.[^\s@]+$/;
+    if (!emailPattern.test(emailInput.value)) {
+        emailError.textContent = 'Please enter a valid email address.';
+        isValid = false;
+    }
+
+    if (messageInput.value.trim() === '') {
+        messageError.textContent = 'Message is required.';
+        isValid = false;
+    }
+
+    // Submission logic
+    if (isValid) {
+        formSuccess.textContent = 'Thank you for your inquiry! We will respond shortly.';
+        document.getElementById('contact-form').reset();
+    }
+}
+
+document.addEventListener('DOMContentLoaded', () => {
+    const contactForm = document.getElementById('contact-form');
+    if (contactForm) {
+        contactForm.addEventListener('submit', handleFormSubmission);
+    }
+});
+
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Noor Watches - Timeless Elegance</title>
+    <link rel="stylesheet" href="css/style.css">
+</head>
+<body>
+    <header>
+        <div class="logo">Noor Watches</div>
+        <nav>
+            <ul>
+                <li><a href="index.html" class="active">Home</a></li>
+                <li><a href="products.html">Products</a></li>
+                <li><a href="about.html">About Store</a></li>
+                <li><a href="contact.html">Contact Us</a></li>
+            </ul>
+        </nav>
+    </header>
+
+    <main class="home-main">
+        <section class="hero-section hero-new-design">
+            <div class="hero-content container">
+                <div class="hero-text-new">
+                    <h1>The Art of Precision Engineering</h1>
+                    <p>Witness the fusion of traditional Swiss craftsmanship and cutting-edge design. Every second counts.</p>
+                    <a href="products.html" class="cta-button">View Masterpieces</a>
+                </div>
+                <div class="hero-image-focus">
+                    <img src="assets/hero-focus.jpg" alt="Featured timepiece close-up">
+                </div>
+            </div>
+        </section>
+
+        <section class="feature-section container">
+            <h2>Why Choose Noor Watches?</h2>
+            <div class="feature-grid">
+                <div class="feature-card">
+                    <img src="assets/icon-precision.jpg" alt="Icon for Precision">
+                    <h3>Swiss Precision</h3>
+                    <p>Meticulous craftsmanship and reliable quartz or automatic movements.</p>
+                </div>
+                <div class="feature-card">
+                    <img src="assets/icon-durability.jpg" alt="Icon for Durability">
+                    <h3>Unmatched Durability</h3>
+                    <p>Scratch-resistant sapphire crystal and high-grade stainless steel casings.</p>
+                </div>
+                <div class="feature-card">
+                    <img src="assets/icon-style.jpg" alt="Icon for Style">
+                    <h3>Timeless Style</h3>
+                    <p>Designs that fuse classic elegance with modern, sophisticated aesthetics.</p>
+                </div>
+                <div class="feature-card">
+                    <img src="assets/icon-support.jpg" alt="Icon for Support">
+                    <h3>24/7 Premium Support</h3>
+                    <p>Dedicated customer service and a comprehensive international warranty.</p>
+                </div>
+            </div>
+        </section>
+
+        <section class="featured-products container">
+            <h2>Our Latest Arrivals</h2>
+            
+            <div class="product-grid">
+                <div class="product-card" data-category="classic">
+                    <img src="assets/watch-1.jpg" alt="Timeless Silver Watch">
+                    <h3>Timeless Silver</h3>
+                    <p class="price">PKR 2000 - 4000</p>
+                </div>
+                <div class="product-card" data-category="luxury">
+                    <img src="assets/watch-2.jpg" alt="Rose Gold Pearl Watch">
+                    <h3>Rose Gold Pearl</h3>
+                    <p class="price">PKR 2000 - 4000</p>
+                </div>
+                <div class="product-card" data-category="sport">
+                    <img src="assets/watch-3.jpg" alt="Chrono Racer Watch">
+                    <h3>Chrono Racer</h3>
+                    <p class="price">PKR 2000 - 4000</p>
+                </div>
+            </div>
+        </section>
+    </main>
+
+    <footer>
+        <div class="footer-container container">
+            <div class="footer-col brand-info">
+                <h4>Noor Watches</h4>
+                <p>Elegance and precision on your wrist. Crafting moments of luxury since 2018.</p>
+            </div>
+            <div class="footer-col">
+                <h4>Quick Links</h4>
+                <ul>
+                    <li><a href="index.html">Home</a></li>
+                    <li><a href="products.html">Shop All</a></li>
+                    <li><a href="about.html">Our Story</a></li>
+                    <li><a href="contact.html">Contact Us</a></li>
+                </ul>
+            </div>
+            <div class="footer-col">
+                <h4>Support</h4>
+                <ul>
+                    <li><a href="#">FAQ</a></li>
+                    <li><a href="#">Shipping & Returns</a></li>
+                    <li><a href="#">Warranty</a></li>
+                    <li><a href="#">Privacy Policy</a></li>
+                </ul>
+            </div>
+            <div class="footer-col contact-info">
+                <h4>Get in Touch</h4>
+                <p>Email: support@noorwatches.com</p>
+                <p>Phone: (555) 123-4567</p>
+            </div>
+        </div>
+        <div class="footer-bottom">
+            <p>&copy; 2025 Noor Watches. All rights reserved.</p>
+        </div>
+    </footer>
+    <script src="js/script.js"></script>
+</body>
+</html>
+
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Noor Watches - About Store</title>
+    <link rel="stylesheet" href="css/style.css">
+</head>
+<body>
+    <header>
+        <div class="logo">Noor Watches</div>
+        <nav>
+            <ul>
+                <li><a href="index.html">Home</a></li>
+                <li><a href="products.html">Products</a></li>
+                <li><a href="about.html" class="active">About Store</a></li>
+                <li><a href="contact.html">Contact Us</a></li>
+            </ul>
+        </nav>
+    </header>
+
+    <main class="about-main">
+        
+        <section class="about-minimal-hero container">
+            <h1>The Art of Less: Minimalist Horology</h1>
+            <p class="hero-intro">Noor Watches is founded on the principle that true elegance is found in simplicity, precision, and enduring quality.</p>
+        </section>
+
+        <section class="minimal-vision container">
+            <h2>Our Heritage of Precision</h2>
+            
+            <div class="vision-content">
+                <p>**Noor Watches** embodies the principle of **Precision Through Minimalism**. Our timepieces are the result of merging uncompromising Swiss horology with clean, contemporary design, crafting timepieces that are built to endure.</p>
+                <p>We commit to a foundation of superior materials—surgical-grade stainless steel, scratch-resistant sapphire crystal, and proven automatic movements—to craft a lasting legacy on your wrist.</p>
+            </div>
+            <a href="products.html" class="cta-button">View Collections</a>
+        </section>
+        
+        <section class="minimal-principles container">
+            <h2>Defining Principles</h2>
+            <div class="principles-grid">
+                <div class="principle-item">
+                    <h3>01. Uncluttered Design</h3>
+                    <p>Focusing on pure form and function, eliminating visual noise to let the quality speak.</p>
+                </div>
+                <div class="principle-item">
+                    <h3>02. Enduring Materials</h3>
+                    <p>Commitment to longevity using superior components that resist wear and time.</p>
+                </div>
+                <div class="principle-item">
+                    <h3>03. Transparent Craftsmanship</h3>
+                    <p>Honest production methods and dedication to ethical, precise assembly.</p>
+                </div>
+            </div>
+        </section>
+
+    </main>
+
+    <footer>
+        <div class="footer-container container">
+            <div class="footer-col brand-info">
+                <h4>Noor Watches</h4>
+                <p>Elegance and precision on your wrist. Crafting moments of luxury since 2018.</p>
+            </div>
+            <div class="footer-col">
+                <h4>Quick Links</h4>
+                <ul>
+                    <li><a href="index.html">Home</a></li>
+                    <li><a href="products.html">Shop All</a></li>
+                    <li><a href="about.html">Our Story</a></li>
+                    <li><a href="contact.html">Contact Us</a></li>
+                </ul>
+            </div>
+            <div class="footer-col">
+                <h4>Support</h4>
+                <ul>
+                    <li><a href="#">FAQ</a></li>
+                    <li><a href="#">Shipping & Returns</a></li>
+                    <li><a href="#">Warranty</a></li>
+                    <li><a href="#">Privacy Policy</a></li>
+                </ul>
+            </div>
+            <div class="footer-col contact-info">
+                <h4>Get in Touch</h4>
+                <p>Email: support@noorwatches.com</p>
+                <p>Phone: (555) 123-4567</p>
+            </div>
+        </div>
+        <div class="footer-bottom">
+            <p>&copy; 2025 Noor Watches. All rights reserved.</p>
+        </div>
+    </footer>
+    <script src="js/script.js"></script>
+</body>
+</html>
+
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Noor Watches - Products</title>
+    <link rel="stylesheet" href="css/style.css">
+</head>
+<body>
+    <header>
+        <div class="logo">Noor Watches</div>
+        <nav>
+            <ul>
+                <li><a href="index.html">Home</a></li>
+                <li><a href="products.html" class="active">Products</a></li>
+                <li><a href="about.html">About Store</a></li>
+                <li><a href="contact.html">Contact Us</a></li>
+            </ul>
+        </nav>
+    </header>
+
+    <main class="products-page-main container">
+        
+        <div class="efficient-filter-bar">
+            
+            <div class="filter-controls">
+                
+                <div class="filter-group-select">
+                    <label for="filter-style">Style:</label>
+                    <select id="filter-style">
+                        <option value="all">All Styles</option>
+                        <option value="automatic">Automatic</option>
+                        <option value="chronograph">Chronograph</option>
+                        <option value="dress">Dress Watch</option>
+                        <option value="minimalist">Minimalist</option>
+                    </select>
+                </div>
+                
+                <div class="filter-group-select">
+                    <label for="filter-material">Material:</label>
+                    <select id="filter-material">
+                        <option value="all">All Materials</option>
+                        <option value="steel">Stainless Steel</option>
+                        <option value="gold">Rose Gold</option>
+                        <option value="titanium">Titanium</option>
+                    </select>
+                </div>
+
+                <div class="filter-group-price">
+                    <label for="price-range-input">Max Price:</label>
+                    <input type="range" id="price-range-input" min="1000" max="5000" value="5000">
+                    <span id="max-price-display">PKR 5000</span>
+                </div>
+
+                <button class="cta-button apply-filter">Search</button>
+
+            </div>
+
+            <div class="sort-controls">
+                <p class="results-count">Showing 1–9 of 24 results</p>
+                <select class="sort-dropdown">
+                    <option value="default">Sort by Default</option>
+                    <option value="price-low">Price: Low to High</option>
+                    <option value="price-high">Price: High to Low</option>
+                    <option value="newest">Newest</option>
+                </select>
+            </div>
+
+        </div>
+
+        <section class="product-listing">
+            <div class="product-grid">
+                <div class="product-card" data-category="classic">
+                    <img src="assets/watch-1.jpg" alt="Timeless Silver Watch">
+                    <h3>Timeless Silver</h3>
+                    <p class="price">PKR 3500</p>
+                    <a href="#" class="quick-view">Quick View</a>
+                </div>
+                <div class="product-card" data-category="luxury">
+                    <img src="assets/watch-2.jpg" alt="Rose Gold Pearl Watch">
+                    <h3>Rose Gold Pearl</h3>
+                    <p class="price">PKR 4800</p>
+                    <a href="#" class="quick-view">Quick View</a>
+                </div>
+                <div class="product-card" data-category="sport">
+                    <img src="assets/watch-3.jpg" alt="Chrono Racer Watch">
+                    <h3>Chrono Racer</h3>
+                    <p class="price">PKR 3200</p>
+                    <a href="#" class="quick-view">Quick View</a>
+                </div>
+                <div class="product-card" data-category="dress">
+                    <img src="assets/watch-4.jpg" alt="Classic Leather Watch">
+                    <h3>Classic Leather</h3>
+                    <p class="price">PKR 2900</p>
+                    <a href="#" class="quick-view">Quick View</a>
+                </div>
+                <div class="product-card" data-category="automatic">
+                    <img src="assets/watch-5.jpg" alt="Automatic Diver Watch">
+                    <h3>Automatic Diver</h3>
+                    <p class="price">PKR 4100</p>
+                    <a href="#" class="quick-view">Quick View</a>
+                </div>
+                <div class="product-card" data-category="gold">
+                    <img src="assets/watch-6.jpg" alt="Luxury Gold Watch">
+                    <h3>Luxury Gold</h3>
+                    <p class="price">PKR 4999</p>
+                    <a href="#" class="quick-view">Quick View</a>
+                </div>
+            </div>
+
+            <div class="pagination">
+                <a href="#">&laquo;</a>
+                <a href="#" class="active">1</a>
+                <a href="#">2</a>
+                <a href="#">3</a>
+                <a href="#">&raquo;</a>
+            </div>
+
+        </section>
+    </main>
+
+    <footer>
+        <div class="footer-container container">
+            <div class="footer-col brand-info">
+                <h4>Noor Watches</h4>
+                <p>Elegance and precision on your wrist. Crafting moments of luxury since 2018.</p>
+            </div>
+            <div class="footer-col">
+                <h4>Quick Links</h4>
+                <ul>
+                    <li><a href="index.html">Home</a></li>
+                    <li><a href="products.html">Shop All</a></li>
+                    <li><a href="about.html">Our Story</a></li>
+                    <li><a href="contact.html">Contact Us</a></li>
+                </ul>
+            </div>
+            <div class="footer-col">
+                <h4>Support</h4>
+                <ul>
+                    <li><a href="#">FAQ</a></li>
+                    <li><a href="#">Shipping & Returns</a></li>
+                    <li><a href="#">Warranty</a></li>
+                    <li><a href="#">Privacy Policy</a></li>
+                </ul>
+            </div>
+            <div class="footer-col contact-info">
+                <h4>Get in Touch</h4>
+                <p>Email: support@noorwatches.com</p>
+                <p>Phone: (555) 123-4567</p>
+            </div>
+        </div>
+        <div class="footer-bottom">
+            <p>&copy; 2025 Noor Watches. All rights reserved.</p>
+        </div>
+    </footer>
+    <script src="js/script.js"></script>
+    <script>
+        const priceRange = document.getElementById('price-range-input');
+        const maxPriceDisplay = document.getElementById('max-price-display');
+        
+        priceRange.addEventListener('input', () => {
+            maxPriceDisplay.textContent = 'PKR ' + priceRange.value;
+        });
+    </script>
+</body>
+</html>
+
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Noor Watches - Contact Us</title>
+    <link rel="stylesheet" href="css/style.css">
+</head>
+<body>
+    <header>
+        <div class="logo">Noor Watches</div>
+        <nav>
+            <ul>
+                <li><a href="index.html">Home</a></li>
+                <li><a href="products.html">Products</a></li>
+                <li><a href="about.html">About Store</a></li>
+                <li><a href="contact.html" class="active">Contact Us</a></li>
+            </ul>
+        </nav>
+    </header>
+
+    <main class="contact-main container">
+        
+        <div class="contact-header">
+            <h1>We're Ready to Help</h1>
+            <p>Whether you have a question about an order, our craftsmanship, or international warranty, our dedicated support team is here for you.</p>
+        </div>
+
+        <div class="contact-grid">
+            
+            <div class="contact-info-panel">
+                <h2>Reach Out Directly</h2>
+                <div class="info-item">
+                    <h3>📧 Email Support</h3>
+                    <p>For general inquiries and warranty claims.</p>
+                    <a href="mailto:support@noorwatches.com">support@noorwatches.com</a>
+                </div>
+                <div class="info-item">
+                    <h3>📞 Phone Support</h3>
+                    <p>Available Mon-Fri, 9:00 AM - 5:00 PM (GMT+5)</p>
+                    <p>(555) 123-4567</p>
+                </div>
+                <div class="info-item">
+                    <h3>📍 Corporate Address</h3>
+                    <p>Noor Watches Headquarters</p>
+                    <p>100 Precision Lane, Suite 400, Time City, TX 77001</p>
+                </div>
+            </div>
+
+            <div class="contact-form-panel">
+                <h2>Send Us a Message</h2>
+                <form class="professional-form">
+                    
+                    <div class="form-group">
+                        <label for="name">Your Full Name *</label>
+                        <input type="text" id="name" name="name" required>
+                    </div>
+
+                    <div class="form-group">
+                        <label for="email">Email Address *</label>
+                        <input type="email" id="email" name="email" required>
+                    </div>
+
+                    <div class="form-group">
+                        <label for="subject">Subject / Reason for Contact *</label>
+                        <select id="subject" name="subject" required>
+                            <option value="">Select a reason...</option>
+                            <option value="order">Order Inquiry</option>
+                            <option value="warranty">Warranty / Repair</option>
+                            <option value="product">Product Question</option>
+                            <option value="general">General Feedback</option>
+                        </select>
+                    </div>
+
+                    <div class="form-group">
+                        <label for="message">Your Message *</label>
+                        <textarea id="message" name="message" rows="5" required></textarea>
+                    </div>
+
+                    <button type="submit" class="cta-button">Submit Inquiry</button>
+                </form>
+            </div>
+
+        </div>
+    </main>
+
+    <footer>
+        <div class="footer-container container">
+            <div class="footer-col brand-info">
+                <h4>Noor Watches</h4>
+                <p>Elegance and precision on your wrist. Crafting moments of luxury since 2018.</p>
+            </div>
+            <div class="footer-col">
+                <h4>Quick Links</h4>
+                <ul>
+                    <li><a href="index.html">Home</a></li>
+                    <li><a href="products.html">Shop All</a></li>
+                    <li><a href="about.html">Our Story</a></li>
+                    <li><a href="contact.html">Contact Us</a></li>
+                </ul>
+            </div>
+            <div class="footer-col">
+                <h4>Support</h4>
+                <ul>
+                    <li><a href="#">FAQ</a></li>
+                    <li><a href="#">Shipping & Returns</a></li>
+                    <li><a href="#">Warranty</a></li>
+                    <li><a href="#">Privacy Policy</a></li>
+                </ul>
+            </div>
+            <div class="footer-col contact-info">
+                <h4>Get in Touch</h4>
+                <p>Email: support@noorwatches.com</p>
+                <p>Phone: (555) 123-4567</p>
+            </div>
+        </div>
+        <div class="footer-bottom">
+            <p>&copy; 2025 Noor Watches. All rights reserved.</p>
+        </div>
+    </footer>
+    <script src="js/script.js"></script>
+</body>
+</html>
