@@ -1,0 +1,237 @@
+/* Custom Pink Palette */
+:root {
+    --primary-pink: #FF69B4;
+    --secondary-pink: #F08080;
+    --background-color-light: #F8F8F8;
+    --background-color-white: #FFFFFF;
+    --text-color-dark: #333333;
+    --text-color-medium: #555555;
+    --border-color: #E0E0E0;
+    --box-shadow: 0 4px 12px rgba(0, 0, 0, 0.05);
+}
+
+/* Global Styles and Reset */
+* {
+    margin: 0;
+    padding: 0;
+    box-sizing: border-box;
+}
+
+body {
+    font-family: 'Arial', sans-serif;
+    background-color: #f2f2f2; 
+    background-image: url('../assets/body-bg-pattern.png'); 
+    background-repeat: repeat;
+    color: var(--text-color-dark);
+    line-height: 1.6;
+}
+
+.container {
+    width: 90%;
+    max-width: 1200px;
+    margin: 20px auto;
+    background-color: var(--background-color-white); 
+    padding: 30px;
+    border-radius: 8px;
+    box-shadow: var(--box-shadow);
+}
+
+/* Header and Navigation */
+header {
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+    padding: 20px 5%;
+    background-color: var(--background-color-white);
+    border-bottom: 1px solid var(--border-color);
+}
+.logo {
+    font-size: 1.6em;
+    font-weight: bold;
+    color: var(--primary-pink);
+    letter-spacing: 1px;
+}
+nav ul { list-style: none; display: flex; }
+nav ul li a { text-decoration: none; color: var(--text-color-medium); padding: 10px 15px; transition: color 0.3s, border-bottom 0.3s; }
+nav ul li a:hover, nav ul li a.active { color: var(--primary-pink); border-bottom: 2px solid var(--primary-pink); }
+
+/* CTA Button Styling */
+.cta-button, .view-section {
+    display: inline-block; padding: 12px 30px; background-color: var(--primary-pink); color: white; text-decoration: none; border-radius: 5px; font-weight: bold;
+    transition: background-color 0.3s, transform 0.3s; border: none; cursor: pointer; text-transform: uppercase; font-size: 0.9em; letter-spacing: 1px;
+}
+.cta-button:hover, .view-section:hover { background-color: #d14f8a; transform: scale(1.05); }
+
+/* --- 1. NEW HERO SECTION (Image-Focused) --- */
+.hero-section.hero-new-design {
+    height: 400px; 
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    background-color: var(--background-color-white); 
+    padding: 0;
+    margin-top: 20px;
+}
+
+.hero-new-design .hero-content {
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+    width: 100%;
+    padding: 0 30px;
+}
+
+.hero-text-new {
+    flex: 1;
+    max-width: 50%;
+    text-align: left;
+    padding-right: 50px;
+}
+
+.hero-text-new h1 {
+    font-size: 3em; 
+    color: var(--primary-pink);
+    margin-bottom: 15px;
+    line-height: 1.1;
+}
+.hero-text-new p {
+    font-size: 1.1em;
+    color: var(--text-color-medium);
+    margin-bottom: 30px;
+}
+
+.hero-image-focus {
+    flex: 1;
+    max-width: 50%;
+    height: 400px;
+    overflow: hidden;
+    position: relative;
+    border-radius: 8px;
+    box-shadow: 0 10px 20px rgba(0, 0, 0, 0.1);
+}
+
+.hero-image-focus img {
+    width: 100%;
+    height: 100%;
+    object-fit: cover;
+    display: block;
+}
+/* --- END NEW HERO SECTION --- */
+
+
+/* --- 2. Feature and Product Section Headings --- */
+.feature-section h2, .featured-products h2 {
+    text-align: center; color: var(--text-color-dark); margin-bottom: 30px; font-size: 1.8em; border-bottom: 2px solid var(--primary-pink); display: block; padding-bottom: 5px; width: auto; margin: 0 auto 30px auto;
+}
+
+/* --- Feature Icons (UNIFIED Hover Effect) --- */
+.feature-grid {
+    display: grid; grid-template-columns: repeat(auto-fit, minmax(250px, 1fr)); gap: 20px; margin-bottom: 30px;
+}
+.feature-card {
+    background-color: var(--background-color-light); padding: 25px; border-radius: 8px; text-align: center; border: 1px solid var(--border-color); position: relative; overflow: hidden; transition: transform 0.4s ease-out, box-shadow 0.4s ease-out, background-color 0.4s;
+}
+.feature-card:hover {
+    transform: translateY(-8px); box-shadow: 0 15px 30px rgba(255, 105, 180, 0.3); background-color: var(--background-color-white); border-color: var(--primary-pink);
+}
+.feature-card img {
+    width: 60px; height: 60px; object-fit: contain; margin-bottom: 15px; transition: transform 0.4s;
+}
+.feature-card:hover img {
+    transform: scale(1.1);
+}
+.feature-card h3 { color: var(--primary-pink); margin-bottom: 8px; font-size: 1.3em; }
+.feature-card p { font-size: 0.95em; color: var(--text-color-medium); }
+
+
+/* --- 3. NEW SINGLE IMAGE PROMO STYLING --- */
+.new-promo-image {
+    padding: 0; /* Ensures the container's padding doesn't interfere */
+    margin: 40px auto;
+    overflow: hidden;
+    border-radius: 8px;
+    box-shadow: var(--box-shadow);
+}
+.new-promo-image img {
+    width: 100%;
+    height: auto;
+    display: block;
+    object-fit: cover;
+}
+/* --- END NEW SINGLE IMAGE PROMO STYLING --- */
+
+
+/* --- 4. Featured Products Image Banner Styling --- */
+.featured-promo-image {
+    margin: 20px 0 30px 0; 
+    border-radius: 8px;
+    overflow: hidden; 
+}
+.featured-promo-image img {
+    width: 100%;
+    height: auto;
+    display: block;
+    object-fit: cover;
+}
+
+/* --- Product Grid Layout (UNIFIED Hover Effect) --- */
+.product-grid {
+    display: grid; grid-template-columns: repeat(auto-fit, minmax(250px, 1fr)); gap: 30px; padding: 20px 0;
+}
+.product-card {
+    background-color: var(--background-color-white); padding: 15px; text-align: center; border: 1px solid var(--border-color); border-radius: 8px; transition: transform 0.4s ease-out, box-shadow 0.4s ease-out, border-color 0.4s;
+}
+.product-card:hover {
+    transform: translateY(-8px); box-shadow: 0 15px 30px rgba(255, 105, 180, 0.3); border-color: var(--primary-pink);
+}
+.product-card img {
+    width: 100%; height: auto; max-height: 200px; object-fit: contain; margin-bottom: 10px;
+}
+.product-card h3 { font-size: 1.2em; color: var(--text-color-dark); margin-bottom: 5px; }
+.price { 
+    font-size: 1.1em; font-weight: bold; color: var(--primary-pink); transition: color 0.3s;
+}
+.product-card:hover .price {
+    color: var(--text-color-dark);
+}
+
+/* --- PROFESSIONAL FOOTER STYLING --- */
+footer {
+    text-align: center; background-color: var(--background-color-white); color: var(--text-color-medium); border-top: 1px solid var(--border-color); padding-top: 30px; margin-top: 40px;
+}
+.footer-container {
+    display: flex; justify-content: space-between; align-items: flex-start; padding: 0 0 30px 0; text-align: left; width: 90%; max-width: 1200px; margin: 0 auto;
+}
+.footer-col { flex: 1; min-width: 150px; padding: 0 15px; }
+.footer-col h4 { color: var(--primary-pink); margin-bottom: 15px; font-size: 1.1em; font-weight: bold; }
+.footer-col ul { list-style: none; }
+.footer-col ul li a { text-decoration: none; color: var(--text-color-medium); font-size: 0.9em; line-height: 2; transition: color 0.3s; }
+.footer-col ul li a:hover { color: var(--primary-pink); }
+.footer-bottom { background-color: var(--background-color-light); padding: 15px 0; font-size: 0.8em; color: #888; }
+
+/* --- Responsive Design (Media Queries) --- */
+@media (max-width: 992px) {
+    /* Responsive for Hero Section */
+    .hero-new-design .hero-content {
+        flex-direction: column;
+        text-align: center;
+        padding: 20px;
+    }
+    .hero-text-new {
+        max-width: 100%;
+        padding-right: 0;
+        margin-bottom: 20px;
+    }
+    .hero-image-focus {
+        max-width: 100%;
+        height: 300px;
+    }
+    .hero-text-new h1 {
+        font-size: 2.5em;
+    }
+}
+@media (max-width: 768px) {
+    header { flex-direction: column; }
+    .footer-container { flex-direction: column; align-items: center; text-align: center; }
+    .footer-col { margin-bottom: 20px; min-width: 100%; }
+}

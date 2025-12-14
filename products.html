@@ -1,0 +1,166 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Noor Watches - Products</title>
+    <link rel="stylesheet" href="css/style.css">
+</head>
+<body>
+    <header>
+        <div class="logo">Noor Watches</div>
+        <nav>
+            <ul>
+                <li><a href="index.html">Home</a></li>
+                <li><a href="products.html" class="active">Products</a></li>
+                <li><a href="about.html">About Store</a></li>
+                <li><a href="contact.html">Contact Us</a></li>
+            </ul>
+        </nav>
+    </header>
+
+    <main class="products-page-main container">
+        
+        <div class="efficient-filter-bar">
+            
+            <div class="filter-controls">
+                
+                <div class="filter-group-select">
+                    <label for="filter-style">Style:</label>
+                    <select id="filter-style">
+                        <option value="all">All Styles</option>
+                        <option value="automatic">Automatic</option>
+                        <option value="chronograph">Chronograph</option>
+                        <option value="dress">Dress Watch</option>
+                        <option value="minimalist">Minimalist</option>
+                    </select>
+                </div>
+                
+                <div class="filter-group-select">
+                    <label for="filter-material">Material:</label>
+                    <select id="filter-material">
+                        <option value="all">All Materials</option>
+                        <option value="steel">Stainless Steel</option>
+                        <option value="gold">Rose Gold</option>
+                        <option value="titanium">Titanium</option>
+                    </select>
+                </div>
+
+                <div class="filter-group-price">
+                    <label for="price-range-input">Max Price:</label>
+                    <input type="range" id="price-range-input" min="1000" max="5000" value="5000">
+                    <span id="max-price-display">PKR 5000</span>
+                </div>
+
+                <button class="cta-button apply-filter">Search</button>
+
+            </div>
+
+            <div class="sort-controls">
+                <p class="results-count">Showing 1–9 of 24 results</p>
+                <select class="sort-dropdown">
+                    <option value="default">Sort by Default</option>
+                    <option value="price-low">Price: Low to High</option>
+                    <option value="price-high">Price: High to Low</option>
+                    <option value="newest">Newest</option>
+                </select>
+            </div>
+
+        </div>
+
+        <section class="product-listing">
+            <div class="product-grid">
+                <div class="product-card" data-category="classic">
+                    <img src="assets/watch-1.jpg" alt="Timeless Silver Watch">
+                    <h3>Timeless Silver</h3>
+                    <p class="price">PKR 3500</p>
+                    <a href="#" class="quick-view">Quick View</a>
+                </div>
+                <div class="product-card" data-category="luxury">
+                    <img src="assets/watch-2.jpg" alt="Rose Gold Pearl Watch">
+                    <h3>Rose Gold Pearl</h3>
+                    <p class="price">PKR 4800</p>
+                    <a href="#" class="quick-view">Quick View</a>
+                </div>
+                <div class="product-card" data-category="sport">
+                    <img src="assets/watch-3.jpg" alt="Chrono Racer Watch">
+                    <h3>Chrono Racer</h3>
+                    <p class="price">PKR 3200</p>
+                    <a href="#" class="quick-view">Quick View</a>
+                </div>
+                <div class="product-card" data-category="dress">
+                    <img src="assets/watch-4.jpg" alt="Classic Leather Watch">
+                    <h3>Classic Leather</h3>
+                    <p class="price">PKR 2900</p>
+                    <a href="#" class="quick-view">Quick View</a>
+                </div>
+                <div class="product-card" data-category="automatic">
+                    <img src="assets/watch-5.jpg" alt="Automatic Diver Watch">
+                    <h3>Automatic Diver</h3>
+                    <p class="price">PKR 4100</p>
+                    <a href="#" class="quick-view">Quick View</a>
+                </div>
+                <div class="product-card" data-category="gold">
+                    <img src="assets/watch-6.jpg" alt="Luxury Gold Watch">
+                    <h3>Luxury Gold</h3>
+                    <p class="price">PKR 4999</p>
+                    <a href="#" class="quick-view">Quick View</a>
+                </div>
+            </div>
+
+            <div class="pagination">
+                <a href="#">&laquo;</a>
+                <a href="#" class="active">1</a>
+                <a href="#">2</a>
+                <a href="#">3</a>
+                <a href="#">&raquo;</a>
+            </div>
+
+        </section>
+    </main>
+
+    <footer>
+        <div class="footer-container container">
+            <div class="footer-col brand-info">
+                <h4>Noor Watches</h4>
+                <p>Elegance and precision on your wrist. Crafting moments of luxury since 2018.</p>
+            </div>
+            <div class="footer-col">
+                <h4>Quick Links</h4>
+                <ul>
+                    <li><a href="index.html">Home</a></li>
+                    <li><a href="products.html">Shop All</a></li>
+                    <li><a href="about.html">Our Story</a></li>
+                    <li><a href="contact.html">Contact Us</a></li>
+                </ul>
+            </div>
+            <div class="footer-col">
+                <h4>Support</h4>
+                <ul>
+                    <li><a href="#">FAQ</a></li>
+                    <li><a href="#">Shipping & Returns</a></li>
+                    <li><a href="#">Warranty</a></li>
+                    <li><a href="#">Privacy Policy</a></li>
+                </ul>
+            </div>
+            <div class="footer-col contact-info">
+                <h4>Get in Touch</h4>
+                <p>Email: support@noorwatches.com</p>
+                <p>Phone: (555) 123-4567</p>
+            </div>
+        </div>
+        <div class="footer-bottom">
+            <p>&copy; 2025 Noor Watches. All rights reserved.</p>
+        </div>
+    </footer>
+    <script src="js/script.js"></script>
+    <script>
+        const priceRange = document.getElementById('price-range-input');
+        const maxPriceDisplay = document.getElementById('max-price-display');
+        
+        priceRange.addEventListener('input', () => {
+            maxPriceDisplay.textContent = 'PKR ' + priceRange.value;
+        });
+    </script>
+</body>
+</html>
